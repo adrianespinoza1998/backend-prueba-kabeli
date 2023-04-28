@@ -9,9 +9,14 @@ export class IndicadoresService {
 
     return result.data;
   }
-  async getIndicador(indicador: string): Promise<Indicador> {
-    const result = await axios(`https://mindicador.cl/api/${indicador}`);
+  async getIndicador(indicador: string): Promise<Indicador | null> {
+    try {
+      const result = await axios(`https://mindicador.cl/api/${indicador}`);
 
-    return result.data;
+      return result.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
   }
 }
