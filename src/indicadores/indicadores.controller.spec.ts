@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { IndicadoresController } from './indicadores.controller';
 import { IndicadoresService } from './indicadores.service';
-import { testingValues } from './testingValues';
+import { testingIndicator, testingIndicators } from './testingValues';
 
 describe('IndicadoresController', () => {
   let controller: IndicadoresController;
@@ -20,9 +20,16 @@ describe('IndicadoresController', () => {
   });
 
   it('should return the indicators', async () => {
-    const expectedResults = testingValues;
+    const expectedResults = testingIndicators;
     jest.spyOn(controller, 'getIndicadores').mockResolvedValue(expectedResults);
     const results = await controller.getIndicadores();
+    expect(results).toEqual(expectedResults);
+  });
+
+  it('should return the indicator', async () => {
+    const expectedResults = testingIndicator;
+    jest.spyOn(controller, 'getIndicador').mockResolvedValue(expectedResults);
+    const results = await controller.getIndicador('uf');
     expect(results).toEqual(expectedResults);
   });
 });

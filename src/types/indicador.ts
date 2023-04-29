@@ -23,3 +23,17 @@ export type ApiIndicador = {
   tasa_desempleo: Indicador;
   bitcoin: Indicador;
 };
+
+export type ValorFecha = {
+  fecha: string;
+  valor: number;
+};
+
+export type DetalleIndicador = {
+  version: string;
+  autor: string;
+  codigo: string;
+  nombre: string;
+  unidad_medida: string;
+  serie: ValorFecha[];
+};

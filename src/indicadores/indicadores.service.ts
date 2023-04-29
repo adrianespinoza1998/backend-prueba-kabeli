@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
-import { ApiIndicador, Indicador } from 'src/types/indicador';
+import { ApiIndicador, DetalleIndicador } from 'src/types/indicador';
 
 @Injectable()
 export class IndicadoresService {
@@ -9,7 +9,7 @@ export class IndicadoresService {
 
     return result.data;
   }
-  async getIndicador(indicador: string): Promise<Indicador | null> {
+  async getIndicador(indicador: string): Promise<DetalleIndicador | null> {
     try {
       const result = await axios(`${process.env.API_URL}/${indicador}`);
 

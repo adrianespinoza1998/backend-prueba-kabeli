@@ -1,6 +1,6 @@
-import { ApiIndicador } from 'src/types/indicador';
+import { ApiIndicador, DetalleIndicador, Indicador } from 'src/types/indicador';
 
-export const testingValues = {
+export const testingIndicators = {
   version: '1.7.0',
   autor: 'mindicador.cl',
   fecha: '2023-04-28T13:00:00.000Z',
@@ -89,3 +89,44 @@ export const testingValues = {
     valor: 28301.71,
   },
 } as ApiIndicador;
+
+export const testingIndicator = {
+  version: '1.7.0',
+  autor: 'mindicador.cl',
+  codigo: 'uf',
+  nombre: 'Unidad de fomento (UF)',
+  unidad_medida: 'Pesos',
+  serie: [
+    { fecha: '2023-04-29T04:00:00.000Z', valor: 35825.49 },
+    { fecha: '2023-04-28T04:00:00.000Z', valor: 35812.42 },
+    { fecha: '2023-04-27T04:00:00.000Z', valor: 35799.37 },
+    { fecha: '2023-04-26T04:00:00.000Z', valor: 35786.31 },
+    { fecha: '2023-04-25T04:00:00.000Z', valor: 35773.27 },
+    { fecha: '2023-04-24T04:00:00.000Z', valor: 35760.22 },
+    { fecha: '2023-04-23T04:00:00.000Z', valor: 35747.19 },
+    { fecha: '2023-04-22T04:00:00.000Z', valor: 35734.15 },
+    { fecha: '2023-04-21T04:00:00.000Z', valor: 35721.12 },
+    { fecha: '2023-04-20T04:00:00.000Z', valor: 35708.1 },
+    { fecha: '2023-04-19T04:00:00.000Z', valor: 35695.08 },
+    { fecha: '2023-04-18T04:00:00.000Z', valor: 35682.07 },
+    { fecha: '2023-04-17T04:00:00.000Z', valor: 35669.06 },
+    { fecha: '2023-04-16T04:00:00.000Z', valor: 35656.05 },
+    { fecha: '2023-04-15T04:00:00.000Z', valor: 35643.05 },
+    { fecha: '2023-04-14T04:00:00.000Z', valor: 35630.06 },
+    { fecha: '2023-04-13T04:00:00.000Z', valor: 35617.07 },
+    { fecha: '2023-04-12T04:00:00.000Z', valor: 35604.08 },
+    { fecha: '2023-04-11T04:00:00.000Z', valor: 35591.1 },
+    { fecha: '2023-04-10T04:00:00.000Z', valor: 35578.12 },
+    { fecha: '2023-04-09T04:00:00.000Z', valor: 35565.15 },
+    { fecha: '2023-04-08T04:00:00.000Z', valor: 35566.3 },
+    { fecha: '2023-04-07T04:00:00.000Z', valor: 35567.44 },
+    { fecha: '2023-04-06T04:00:00.000Z', valor: 35568.59 },
+    { fecha: '2023-04-05T04:00:00.000Z', valor: 35569.74 },
+    { fecha: '2023-04-04T04:00:00.000Z', valor: 35570.89 },
+    { fecha: '2023-04-03T04:00:00.000Z', valor: 35572.04 },
+    { fecha: '2023-04-02T04:00:00.000Z', valor: 35573.19 },
+    { fecha: '2023-04-01T03:00:00.000Z', valor: 35574.33 },
+    { fecha: '2023-03-31T03:00:00.000Z', valor: 35575.48 },
+    { fecha: '2023-03-30T03:00:00.000Z', valor: 35576.63 },
+  ],
+} as DetalleIndicador;
