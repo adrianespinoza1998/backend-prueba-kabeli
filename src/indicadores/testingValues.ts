@@ -1,4 +1,4 @@
-import { ApiIndicador, DetalleIndicador, Indicador } from 'src/types/indicador';
+import { ApiIndicador, DetalleIndicador } from 'src/types/indicador';
 
 export const testingIndicators = {
   version: '1.7.0',
