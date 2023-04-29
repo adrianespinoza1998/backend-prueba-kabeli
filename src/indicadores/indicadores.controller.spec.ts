@@ -21,11 +21,8 @@ describe('IndicadoresController', () => {
 
   it('should return the indicators', async () => {
     const expectedResults = testingValues;
-
     jest.spyOn(controller, 'getIndicadores').mockResolvedValue(expectedResults);
-
     const results = await controller.getIndicadores();
-
     expect(results).toEqual(expectedResults);
   });
 });

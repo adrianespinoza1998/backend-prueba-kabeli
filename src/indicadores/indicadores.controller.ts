@@ -1,7 +1,7 @@
 import { Controller, Get, Param, HttpException } from '@nestjs/common';
 import { IndicadoresService } from './indicadores.service';
 
-@Controller('indicadores')
+@Controller('/api/indicadores')
 export class IndicadoresController {
   constructor(private indicadoresService: IndicadoresService) {}
 
