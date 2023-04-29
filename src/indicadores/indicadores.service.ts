@@ -4,14 +4,14 @@ import { ApiIndicador, Indicador } from 'src/types/indicador';
 
 @Injectable()
 export class IndicadoresService {
-  async getIndicadores(): Promise<ApiIndicador[]> {
-    const result = await axios('https://mindicador.cl/api');
+  async getIndicadores(): Promise<ApiIndicador> {
+    const result = await axios(process.env.API_URL);
 
     return result.data;
   }
   async getIndicador(indicador: string): Promise<Indicador | null> {
     try {
-      const result = await axios(`https://mindicador.cl/api/${indicador}`);
+      const result = await axios(`${process.env.API_URL}/${indicador}`);
 
       return result.data;
     } catch (error) {

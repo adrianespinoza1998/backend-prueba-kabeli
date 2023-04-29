@@ -2,14 +2,14 @@ export type Indicador = {
   codigo: string;
   nombre: string;
   unidad_medida: string;
-  fecha: Date;
+  fecha: string;
   valor: number;
 };
 
 export type ApiIndicador = {
   version: string;
   autor: string;
-  fecha: Date;
+  fecha: string;
   uf: Indicador;
   ivp: Indicador;
   dolar: Indicador;
