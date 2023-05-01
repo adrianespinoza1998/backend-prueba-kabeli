@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
 import { CacheModule, CacheInterceptor } from '@nestjs/cache-manager';
 import { IndicadoresModule } from './indicadores/indicadores.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -12,9 +13,12 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
       envFilePath: '.env',
     }),
     CacheModule.register(),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'client'),
+    }),
     IndicadoresModule,
   ],
-  controllers: [AppController],
+  controllers: [],
   providers: [
     {
       provide: APP_INTERCEPTOR,
